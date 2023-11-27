@@ -1,0 +1,12 @@
+.l-container {
+  width: 100%;
+  position: relative;
+  margin-top: 200px;
+  // margin-bottom: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  @include xs{
+    margin-top: 0;
+    // margin-bottom: 130px;
+  }
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+// common
+  a{
+    letter-spacing: 0.1em;
+  }
+// ~commom
+*{
+  color: #333333;
+  letter-spacing: 0.02em;
+}
+        
+
+// foundation
+@import "./foundation/reset";
+@import "./foundation/base";
+
+// object/component
+@import "./object/component/inner";
+@import "./object/component/btn";
+@import "./object/component/animFadeIn";
+@import "./object/component/secTitle.scss";
+@import "./object/component/intro";
+
+
+// object/project
+@import "./object/project/_sec";
+
+// layout
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/footer";
+@import "./layout/loader";
+
+// utility
+@import "./object/utility/align";
+@import "./object/utility/alpha";
+@import "./object/utility/clearfix";
+@import "./object/utility/disp";
+@import "./object/utility/event";
+@import "./object/utility/font";
+@import "./object/utility/margin";
+@import "./object/utility/padding";
+@import "./object/utility/position";
+@import "./object/utility/vertical";
+
+
+

@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.l-header {
+  width: 100%;
+  height: 110px;
+  background: $main-color;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include xs {
+    height: 60px;
+  }
+
+  &__inner{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include xs{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+      .logo {
+          display: block;
+          color: #FFF;
+          font-weight: 700;
+          font-size: 40px;
+          width: 100px;
+          @include xs{
+            width: 45px;
+          }
+        img{
+          width: 170px;
+        }
+        }
+      .contents{
+          display: flex;
+            justify-content: center;
+            align-items: center;
+        // height: 20px;
+        @include xs{
+          display: none;
+        }
+        .menus{
+          display: flex;
+          height: 20px;
+          &__list{
+            margin-right: 20px;
+            height: 20px;
+            &__anc{
+              display: block;
+              color: $company-color;
+              font-size: 18px;
+              transition: all 0.3s;
+              &:hover{
+                color: #FFF;
+              }
+            }
+          }
+        }
+        &__line{
+          display: block;
+          color: #FFF;
+          padding: 12px 20px;
+          border-radius: 50px;
+          align-items: center;
+          line-height: 15px;
+          transition: all 0.3s;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+        .contact{
+          color: #FFF;
+        }
+      }
+      .ham{
+        display: none;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+            flex-flow: row wrap;
+            align-items: center;
+            z-index: 90;
+            @include xs{
+                        display: flex;
+            }
+        >span{
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: all 250ms ease-out;
+            transform-origin: 0 0;
+            &:nth-of-type(1){
+              &.is-active{
+                background-color: #005198;
+                transform: rotate(45deg) translate(1px, -1px);
+              }
+            }
+            &:nth-of-type(2){
+              &.is-active{
+                opacity: 0;
+              }
+            }
+            &:nth-of-type(3){
+              &.is-active{
+                background-color: #005198;
+                transform: rotate(-45deg) translate(-1px, 0px);
+              }
+            }
+        }
+      }
+  }
+  &__contentsSp {
+    padding-top: 20px;
+    width: 100%;
+    background-color: $main-color;
+    position: absolute;
+    right: -100%;
+    top: 60px;
+    transition: all 0.3s;
+    &.is-active{
+      right: 0;
+    }
+    .menu {
+      margin-bottom: 20px;
+      &__list {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__anc {
+          color: #FFF;
+          display: block;
+        }
+      }
+    }
+
+  }
+}

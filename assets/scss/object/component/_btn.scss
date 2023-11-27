@@ -1,0 +1,50 @@
+.c-btn{
+  padding: 20px 30px;
+  border: $main-color 3px solid;
+  position: relative;
+  transition: padding 0.3s ease, transform 0.3s ease !important;
+  // transform: translate(-15px, -15px);
+  @include xs{
+      border: $main-color 1.5px solid;
+      text-align: center;
+  }
+  &__link{
+    @include xs{
+      font-size: 16px;
+      padding: 10px 0;
+    }
+    &::after{
+      content: '';
+      width: 15px;
+      height: 15px;
+      border: 0;
+      border-top: solid 3px #0f0e0e;
+      border-right: solid 3px #0f0e0e;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      margin-top: 0px;
+      transform: rotate(45deg) translateY(-50%);
+      @include xs{
+        width:12px;
+        height:12px;
+      }
+    }
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  &__mark{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    border: #005198 solid 3px;
+    z-index: -1;
+    transition: width 0.3s ease, height 0.3s ease,top 0.3s ease,left 0.3s ease,;
+    @include xs{
+      border: #005198 solid 1.5px;
+    }
+  }
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will Pride</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<div id="cursor-pointer" class="cursor-pointer"></div>
+
+<body class="root" id="root">
+  <header class="l-header cursorChange">
+    <div class="l-header__inner">
+      <a href="/" class="logo">
+        <img src="./assets/images/mv/logo.svg" alt=""> 
+      </a>
+      <div class="contents">
+        <ul class="menus">
+          <li class="menus__list">
+            <a href="#about" class="menus__list__anc">about</a>
+          </li>
+          <li class="menus__list">
+            <a href="#service" class="menus__list__anc">service</a>
+          </li>
+          <li class="menus__list">
+            <a href="#plan" class="menus__list__anc">plan</a>
+          </li>
+          <li class="menus__list">
+            <a href="#flow" class="menus__list__anc">flow</a>
+          </li>
+          <li class="menus__list">
+            <a href="#company" class="menus__list__anc">company</a>
+          </li>
+        </ul>
+        <a href="" class="contact">
+          contact
+        </a>
+      </div>
+      <div class="ham" id="ham">
+        <span class="hamSpan"></span>
+        <span class="hamSpan"></span>
+        <span class="hamSpan"></span>
+      </div>
+    </div>
+    <div class="l-header__contentsSp" id="headerMenuSp">
+      <ul class="menu">
+        <li class="menu__list"><a href="#about" class="menu__list__anc">About</a></li>
+        <li class="menu__list"><a href="#service" class="menu__list__anc">Service</a></li>
+        <li class="menu__list"><a href="#plan" class="menu__list__anc">Plan</a></li>
+        <li class="menu__list"><a href="#flow" class="menu__list__anc">Flow</a></li>
+        <li class="menu__list"><a href="#company" class="menu__list__anc">Company</a></li>
+        <li class="menu__list"><a href="" class="menu__list__anc">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- loader -->
+  <div class="l-loader cursorChange" id="loader">
+    <div class="l-loader__box">
+          <div class="l-loader__text" id="loader-text"></div>
+    <svg class="l-loader__circle-container" viewBox="0 0 50 50">
+      <circle class="l-loader__circle" cx="25" cy="25" r="20"></circle>
+    </svg>
+    </div>
+  </div>
+
+  <div class="mv">
+    <div class="mv__title">
+      <img src="./assets/images/mv/mark.svg" alt="" class="mv__title__mark">
+      <h1 id="animated-text" class="mv__title__text">
+        ビジョンを映し出す、<BR>感動のウェブ体験。
+      </h1>
+      <img src="./assets/images/mv/logo.svg" alt="" class="mv__title__logo" id="mvLogo">
+    </div>
+    <div class="mv__scroll">
+      <img src="./assets/images/commom/scroll.svg" alt="">
+    </div>
+  </div>
+  <div class="l-container">
+
+    <!-- アバウト -->
+    <section class="p-sec about" id="about">
+      <div class="c-inner c-inner--mini">
+        <h1 class="c-secTitle about__title c-fadeIn">
+          <img src="./assets/images/commom/markTitle.svg" alt="">
+          <div>
+            About
+          </div>
+        </h1>
+        <div class="about__contents">
+          <p class="c-intro c-fadeIn about__contents__intro">
+            弊社は中小企業や個人経営の飲食店や小売店向けに特化したウェブ制作サービスを提供しています。<br>
+            私たちの強みは、デザインテンプレートからお客様がお選び頂くことで、迅速かつ効率的にウェブサイトを構築できる点です。<br>
+            また、お客様の独自性を大切にし、完全オリジナルのデザイン制作も承っています。<br>
+            さらに、お持ちのデザインを基にしたウェブサイト構築も可能です。<br>
+            私たちは、お客様のビジネスの成功を支えるために、柔軟かつ迅速なサービスを心がけています。<br>
+            あなたのビジネスに新しい風を、私たちと共に吹かせましょう。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- サービス -->
+    <section class="p-sec service" id="service">
+      <div class="c-inner c-inner--mini">
+        <h1 class="c-secTitle service__title c-fadeIn">
+          <img src="./assets/images/commom/markTitle.svg" alt="">
+          <div>
+            Service
+          </div>
+        </h1>
+        <div class="service__contents">
+          <p class="c-intro c-fadeIn ">
+            デバイスごとに最適化された3種類のHTMLコーディングプランを基本としております。<br>
+            それに加えて、Javascriptによるインタラクティブな機能やWordpressを利用した<br class="u-visible_lg">コンテンツ管理システムの組み込みなど、豊富な追加オプションを取り揃えております。
+          </p>
+          <div class="service__contents__menu">
+            <ul class="service__contents__menu__record">
+              <li class="service__contents__menu__record__each c-fadeIn">
+                <img src="./assets/images/service/menu4.png" alt="">
+              </li>
+              <li class="service__contents__menu__record__each c-fadeIn">
+                <img src="./assets/images/service/menu2.png" alt="">
+              </li>
+              <li class="service__contents__menu__record__each c-fadeIn">
+                <img src="./assets/images/service/menu3.png" alt="">
+              </li>
+            </ul>
+            <ul class="service__contents__menu__record">
+              <li class="service__contents__menu__record__each c-fadeIn">
+                <img src="./assets/images/service/menu5.png" alt="">
+              </li>
+              <li class="service__contents__menu__record__each c-fadeIn">
+                <img src="./assets/images/service/menu6.png" alt="">
+              </li>
+              <li class="service__contents__menu__record__each c-fadeIn">
+                <img src="./assets/images/service/menuWordpress.png" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プラン -->
+    <section class="p-sec plan" id="plan">
+      <div class="c-inner c-inner--mini">
+        <h1 class="c-secTitle service__title c-fadeIn">
+          <img src="./assets/images/commom/markTitle.svg" alt="">
+          <div>
+            Plan
+          </div>
+        </h1>
+        <div class="plan__contents">
+          <p class="c-intro c-fadeIn ">
+            お客様の多様な要望に応えるために、三つの異なるウェブ制作プランを用意しました。<br>
+            それぞれのプランは、異なる目的と予算に合わせてお選びいただけます。
+          </p>
+          <ul class="plan__contents__menu">
+            <li class="plan__contents__menu__each">
+              <h2 class="plan__contents__menu__each__title c-fadeInLeft">
+                テンプレート・カスタマイズプラン
+              </h2>
+              <div class="plan__contents__menu__each__explanation c-fadeInRight">
+                <p>
+                  このプランは、時間とコストを効率的に使いたいお客様に最適です。
+                  選ばれたテンプレートに、<br>お客様の個性を反映した画像やテキストを追加することで、
+                  短時間で質の高いウェブサイトを構築いたしします。<br>
+                  この手軽さは、特にスタートアップや中小企業に人気です。
+                </p>
+              </div>
+            </li>
+            <li class="plan__contents__menu__each">
+              <h2 class="plan__contents__menu__each__title c-fadeInLeft">
+                フル・デザインプラン
+              </h2>
+              <div class="plan__contents__menu__each__explanation c-fadeInRight">
+                <p>
+                  全なオーダーメイドを求めるお客様向けに設計されています。<br>
+                  こちらのプランでは、お客様の具体的なビジョンに基づいて、
+                  一からウェブサイトをデザインし、構築します。<br>
+                  このアプローチは、独特なブランディングや特別な機能が必要な企業や個人に適しています。
+                </p>
+              </div>
+            </li>
+            <li class="plan__contents__menu__each">
+              <h2 class="plan__contents__menu__each__title c-fadeInLeft">
+                デザイン・トランスコードプラン
+              </h2>
+              <div class="plan__contents__menu__each__explanation c-fadeInRight">
+                <p>
+                すでにデザインが完成しているが、それを機能的なウェブサイトに変換する必要があるお客様向けです。<br>
+                このプランは、デザイン会社やプロフェッショナルなデザイナーが作成したビジュアルを、
+                技術的な専門知識を活用してウェブサイトに変換します。このプランは、
+                ウェブ開発の専門知識が不足している方に最適です。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- フロー -->
+    <section class="p-sec flow" id="flow">
+      <div class="c-inner c-inner--mini">
+        <h1 class="c-secTitle service__title c-fadeIn">
+          <img src="./assets/images/commom/markTitle.svg" alt="">
+          <div>
+            flow
+          </div>
+        </h1>
+        <div class="flow__contents">
+          <p class="c-intro c-fadeIn ">
+            大まかな流れは、下記の通りです。<br>
+            プロジェクトによって柔軟に対応できますので、お気軽にお問合せください。
+          </p>
+          <ul class="flowList">
+            <li class="flowList__each c-fadeInLeft cursorChange">
+              <div class="flowList__each__title">
+                <div class="flowList__each__title__icon">
+                  <img src="./assets/images/flow/flow11.svg" alt="">
+                </div>
+                <h3>お問い合せ</h3>
+              </div>
+              <p class="flowList__each__text">電話、メールでお問合せください</p>
+            </li>
+            <div class="flowList__arrow c-fadeIn">
+              <img src="./assets/images/flow/flowArrow.svg" alt="">
+            </div>
+            <li class="flowList__each c-fadeInRight cursorChange">
+              <div class="flowList__each__title">
+                <div class="flowList__each__title__icon">
+                  <img src="./assets/images/flow/flow2.svg" alt="">
+                </div>
+                <h3>お見積もり</h3>
+              </div>
+              <p class="flowList__each__text">ご質問、ご依頼の際に見積もりいたします。</p>
+            </li>
+            <div class="flowList__arrow c-fadeIn">
+              <img src="./assets/images/flow/flowArrow.svg" alt="">
+            </div>
+            <li class="flowList__each c-fadeInLeft cursorChange">
+              <div class="flowList__each__title">
+                <div class="flowList__each__title__icon">
+                  <img src="./assets/images/flow/flow3.svg" alt="">
+                </div>
+                <h3>データ入稿</h3>
+              </div>
+              <p class="flowList__each__text">XD/Illustrator/ Photoshop/ figmaでのご入稿<br>
+              ※弊社でデザインを承ることも可能です。</p>
+            </li>
+            <div class="flowList__arrow c-fadeIn">
+              <img src="./assets/images/flow/flowArrow.svg" alt="">
+            </div>
+            <li class="flowList__each c-fadeInRight cursorChange">
+              <div class="flowList__each__title">
+                <div class="flowList__each__title__icon">
+                  <img src="./assets/images/flow/flow4.svg" alt="">
+                </div>
+                <h3>コーディング</h3>
+              </div>
+              <p class="flowList__each__text">いただいたデータを元にコーディングをします。<br>
+              ※仮納品は最短５営業日〜となります。</p>
+            </li>
+            <div class="flowList__arrow c-fadeIn">
+              <img src="./assets/images/flow/flowArrow.svg" alt="">
+            </div>
+            <li class="flowList__each c-fadeInLeft cursorChange">
+              <div class="flowList__each__title">
+                <div class="flowList__each__title__icon">
+                  <img src="./assets/images/flow/flow5.svg" alt="">
+                </div>
+                <h3>仮納品・確認作業</h3>
+              </div>
+              <p class="flowList__each__text">コーディングが完了しましたら一度仮納品を<br>
+              させていただき、修正点がないかご確認いただきます。</p>
+            </li>
+            <div class="flowList__arrow c-fadeIn">
+              <img src="./assets/images/flow/flowArrow.svg" alt="">
+            </div>
+            <li class="flowList__each c-fadeInRight cursorChange">
+              <div class="flowList__each__title">
+                <div class="flowList__each__title__icon">
+                  <img src="./assets/images/flow/flow6.svg" alt="">
+                </div>
+                <h3>本番納品</h3>
+              </div>
+              <p class="flowList__each__text">全てのご確認が終了しましたら改めまして<br>
+              正式なデータ一式をお渡し致します。<br>
+              以上でお取引が完了となります。</p>
+            </li>
+            <p class="note">※他の工程を挟んだり、順序が前後となる場合がございます、ご了承ください。</p>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+      <!-- カンパニー -->
+    <section class="p-sec company" id="company">
+      <div class="c-inner c-inner--mini">
+        <h1 class="c-secTitle service__title c-fadeIn">
+          <img src="./assets/images/commom/markTitle.svg" alt="">
+          <div>
+            Company
+          </div>
+        </h1>
+        <div class="company__contents">
+          <div class="company__contents__text c-fadeInRight">
+            <h3 class="company__contents__text__logo">
+              <img src="./assets/images/company/logo 3.png" alt="">
+            </h3>
+            <p>
+              大手金融機関で要求されるようなミッションクリティカルな<br>
+              システムの設計/開発を得意とするシステムのスペシャリスト集団です。<br>
+              大手金融機関でのインフラ構築やクラウドサービス導入、<br>
+              及びそれらＰＪのプロジェクトマネジメント業務の実績があり、<br>
+              弊社の得意領域として各種支援サービスを<br>
+              提供させて頂いております。
+            </p>
+            <div class="company__contents__text__mark c-fadeInRight"></div>
+          </div>
+          <div class="company__contents__media c-fadeInLeft">
+            <img src="./assets/images/company/companyImg.png" alt="">
+            <div class="company__contents__media__mark c-fadeInLeft"></div>
+          </div>
+          <a href="https://willpride.co.jp/" target="_blank" class="c-btn company__contents__btn c-fadeIn">
+            will pride 公式サイト
+            <div class="c-btn__mark"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="l-footer cursorChange">
+    <div class="c-inner c-inner--content">
+      <div class="l-footer__contents">
+        <a href="" class="logo">
+          <img src="./assets/images/mv/logo.svg" alt="">
+        </a>
+        <ul class="menu">
+          <li class="menu__list"><a href="" class="menu__list__anc">about</a></li>
+          <li class="menu__list"><a href="" class="menu__list__anc">service</a></li>
+          <li class="menu__list"><a href="" class="menu__list__anc">plan</a></li>
+          <li class="menu__list"><a href="" class="menu__list__anc">flow</a></li>
+          <li class="menu__list"><a href="" class="menu__list__anc">company</a></li>
+        </ul>
+      </div>
+      <div class="copy">&copy; 2023 Will Pride</div>
+    </div>
+  </footer>
+</body>
+
+<!-- ライブラリ -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- /ライブラリ -->
+<!-- 共通JS  -->
+<script src="./assets/js/common.js"></script>
+<!-- /共通JS  -->
+
+</html>

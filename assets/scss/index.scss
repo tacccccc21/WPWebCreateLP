@@ -1,0 +1,481 @@
+@charset "utf-8";
+
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+
+.cursor-pointer {
+  width: 15px;
+  /* ポインターのサイズ */
+  height: 15px;
+  /* ポインターのサイズ */
+  border-radius: 50%;
+  /* 円形にする */
+  background-color: $main-color;
+  /* ポインターの色 */
+  position: fixed;
+  /* ページに対して固定 */
+  pointer-events: none;
+  /* ポインターがクリックイベントを受け取らないようにする */
+  z-index: 9999;
+  /* 他の要素の上に表示 */
+  transform: translate(-50%, -50%);
+  /* 中心を基準にする */
+  display: none;
+  /* 初期状態では非表示 */
+  z-index: 11;
+  &.special-cursor{
+    background-color: #FFF;
+  }
+}
+
+
+.mv {
+  margin-top: 110px;
+  width: 100%;
+  height: calc(100vh - 110px);
+  position: relative;
+  background-color: aliceblue;
+  background-image: url(../images/mv/mv.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include lg{
+  }
+  @include xs{
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    margin-bottom: 100px;
+    background-image: url(../images/mv/mvSp.jpg);
+    background-position: center center;
+  }
+  &::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:  rgb(255, 255, 255, 0.1);
+    left: 0;
+    top: 0;
+  }
+
+
+  &__title{
+    // width: 60%;
+    position: absolute;
+    left: 10%;
+    bottom: 50%;
+    transform: translate(0 , 50%);
+    // aspect-ratio: 9/4;
+    // background-color: #FAF321;
+    @include xs{
+      background: rgba($color:#fff, $alpha: 0.8);
+      padding: 30px;
+    }
+    h1{
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: bold;
+      display: block;
+      z-index: 3;
+      margin-bottom: 20px;
+      opacity: 0;
+      transition: all 0.5s;
+      @include xs{
+        font-size: 24px;
+      }
+      &.start {
+        opacity: 1;
+      }
+      @keyframes floatUp {
+          from {
+            transform: translateY(20px);
+            opacity: 0;
+          }
+      
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      
+        span {
+          display: inline-block;
+          animation: floatUp 0.5s ease;
+          opacity: 0;
+          animation-fill-mode: forwards; // アニメーション終了後のスタイルを保持
+        }
+    }
+    &__mark {
+      position: absolute;
+      left: -80px;
+      top: -110px;
+      z-index: -1;
+      @include xs{
+        width: 60px;
+        left: -20px;
+        top: -20px;
+      }
+    }
+    &__logo{
+      opacity: 0;
+      transition: all 0.5s;
+      @include xs{
+        width: 100px;
+      }
+      &.start{
+        opacity: 1;
+      }
+    }
+  }
+  &__scroll{
+    // width: 10px;
+    // height: 50px;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    // transform: translate(-50%, 50%);
+    animation: scroll 2s ease infinite reverse;
+    z-index: 3;
+    @include xs{
+      width: 15px;
+    }
+  }
+
+  @keyframes scroll{
+    0%{
+      opacity: 0;
+      transform: translateY(60%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(40%);
+    }
+  }
+}
+
+.about{
+  &__contents{
+    &__intro{
+      font-size: 22px;
+      @include xs{
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.service{
+  @include xs{
+    text-align: center;
+  }
+  &__title{
+
+    @include xs{
+
+    }
+  }
+  &__contents{
+    &__menu{
+      &__record{
+        display: flex;
+        justify-content: space-between;
+        @include xs{
+          display: block;
+        }
+        &:first-child{
+          margin-bottom: 75px;
+          @include xs {
+              margin-bottom: 0;
+            }
+        }
+        &__each{
+          margin-right: 75px;
+          @include xs {
+            margin-bottom: 20px;
+            margin-right: 0;
+          }
+          &:last-child{
+          margin-right: 0;
+        }
+        }
+      }
+    }
+  }
+}
+
+.plan{
+  &__contents{
+    &__menu{
+      &__each{
+        width: 100%;
+        height: 200px;
+        position: relative;
+        margin-bottom: 80px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        @include xs {
+          margin-bottom: 40px;
+          height: auto;
+        }
+        &__title{
+          background-color: #64B7FF;
+          color: #fff;
+          width: 40%;
+          height: 70px;
+          line-height: 70px;
+          text-align: center;
+          position: absolute;
+          border-radius: 5px;
+          left: 0;
+          top: 0;
+          z-index: 3;
+          font-size: 28px;
+          @include xs {
+            position: static;
+            height: 50px;
+            line-height: 50px;
+            width: calc(100% + 20px);
+            margin-left: -20px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+            font-size: 20px;
+            }
+        }
+        &__explanation{
+          background-color: #C0FFFB;
+            position: absolute;
+            width: 75%;
+            bottom: 0;
+            right: 0;
+            height: 160px;
+            line-height: 160px;
+            border-radius: 5px;
+            text-align: center;
+            /* コンテナ内の要素を中央揃えに */
+            @include xs {
+                position: relative;
+                height: auto;
+                margin-bottom: 20px;
+                padding: 20px 40px 20px 20px;
+                width: calc(100% + 20px);
+                border-radius: 5px 0 0 5px;
+              }
+          >p{
+              width: 90%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: left;
+              @include xs {
+                  height: 100%;
+                  width: calc(100% + 20px);
+                  position: relative;
+                  top: auto;
+                  left: auto;
+                  transform: translate(0,0);
+                  font-size: 14px;
+                }
+          }
+        }
+      }
+    }
+  }
+}
+
+.flow{
+  background-color: #F5F5F5;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include xs{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .flowList{
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &__each{
+      background-color: $main-color;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      height: 130px;
+      @include xs{
+        height: auto;
+        display: block;
+        padding: 20px;
+      }
+      &__title{
+        display: flex;
+        place-items: center;
+        width: 50%;
+        @include xs {
+          width: 100%;
+          margin-bottom: 20px;
+          justify-content: center;
+          }
+        &__icon{
+        display: flex;
+          justify-content: center;
+          width: 50%;
+          @include xs{
+          width: 45px;
+          margin-right: 20px;
+          }
+          >img {
+          @include xs {
+              width: 45px;
+            }
+          }
+        }
+        h3{
+          width: 50%;
+          display: block;
+          font-size: 24px;
+          font-weight: bold;
+          @include xs {
+              width: auto;
+              font-size: 18px;
+            }
+        }
+      }
+      &__text{
+        display: grid;
+        place-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        text-align: left;
+        @include xs {
+            width: 100%;
+            font-size: 14px;
+          }
+      }
+    }
+    &__arrow{
+      width: 42px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      @include xs{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        width: 21px;
+      }
+    }
+    .note{
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.company{
+  &__contents{
+    height: 650px;
+    position: relative;
+    @include xs{
+      height: auto;
+    }
+    &__text{
+      padding: 60px 40px;
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      text-align: center;
+      border: #005198 3px solid;
+      z-index: 1;
+      background: rgba($color: #FFF, $alpha: .4);
+      @include xs {
+          position: relative;
+          bottom: auto;
+          left: auto;
+          padding: 20px;
+          text-align: left;
+          border: #005198 1.5px solid;
+        }
+      &__logo{
+        margin-left: auto;
+        margin-right: auto;
+        width: 130px;
+        margin-bottom: 30px;
+        @include xs{
+          width: 70px;
+          margin-bottom: 20px;
+        }
+      }
+      >p{
+        font-size: 24px;
+        @include xs{
+          font-size: 14px;
+        }
+      }
+      &__mark{
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        border: #64B7FF solid 3px;
+        z-index: -1;
+        @include xs{
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          top: -17px;
+          left: -17px;
+          border: #64B7FF solid 1.5px;
+        }
+      }
+    }
+    &__media{
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include xs {
+          position: relative;
+          top: auto;
+          right: auto;
+          margin-bottom: 40px;
+        }
+      &__mark {
+          width: 120px;
+          height: 120px;
+          position: absolute;
+          bottom: -30px;
+          right: -30px;
+          border: #64B7FF solid 3px;
+          z-index: -1;
+        @include xs {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            bottom: -17px;
+            right: -17px;
+            border: #64B7FF solid 1.5px;
+          }
+        }
+    }
+    &__btn{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include xs {
+          position: relative;
+          bottom: auto;
+          right: auto;
+          display: block;
+      }
+    }
+  }
+}
